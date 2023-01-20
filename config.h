@@ -17,7 +17,7 @@
 #undef HAVE_SIGSET_T
 
 /* Define if you have the <signal.h> header file.  */
-#undef HAVE_SIGNAL_H
+#define HAVE_SIGNAL_H
 
 /* Define if you have the Borland TASM32 or compatible assembler.  */
 #undef HAVE_TASM32
@@ -41,7 +41,7 @@
 #undef NEED_UNICODE_CONSTS
 
 /* Define if your C (not C++) compiler supports "inline" functions. */
-#undef HAVE_C_INLINE
+#define HAVE_C_INLINE
 
 /* Do we know about type mode_t? */
 #undef HAVE_MODE_T

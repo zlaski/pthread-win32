@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(registry:HKEY_LOCAL_MACHINE\SOFTWARE\Akisystems\akibld@Sources)akibld-lib.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7A5A327C-7602-4A4E-8B82-780DFEFCB9B3}</ProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy /y pthread.h $(OutDir)..\include</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="pthread_attr_destroy.c" />
+    <ClCompile Include="pthread_attr_getaffinity_np.c" />
+    <ClCompile Include="pthread_attr_getdetachstate.c" />
+    <ClCompile Include="pthread_attr_getinheritsched.c" />
+    <ClCompile Include="pthread_attr_getname_np.c" />
+    <ClCompile Include="pthread_attr_getschedparam.c" />
+    <ClCompile Include="pthread_attr_getschedpolicy.c" />
+    <ClCompile Include="pthread_attr_getscope.c" />
+    <ClCompile Include="pthread_attr_getstackaddr.c" />
+    <ClCompile Include="pthread_attr_getstacksize.c" />
+    <ClCompile Include="pthread_attr_init.c" />
+    <ClCompile Include="pthread_attr_setaffinity_np.c" />
+    <ClCompile Include="pthread_attr_setdetachstate.c" />
+    <ClCompile Include="pthread_attr_setinheritsched.c" />
+    <ClCompile Include="pthread_attr_setname_np.c" />
+    <ClCompile Include="pthread_attr_setschedparam.c" />
+    <ClCompile Include="pthread_attr_setschedpolicy.c" />
+    <ClCompile Include="pthread_attr_setscope.c" />
+    <ClCompile Include="pthread_attr_setstackaddr.c" />
+    <ClCompile Include="pthread_attr_setstacksize.c" />
+    <ClCompile Include="pthread_barrierattr_destroy.c" />
+    <ClCompile Include="pthread_barrierattr_getpshared.c" />
+    <ClCompile Include="pthread_barrierattr_init.c" />
+    <ClCompile Include="pthread_barrierattr_setpshared.c" />
+    <ClCompile Include="pthread_barrier_destroy.c" />
+    <ClCompile Include="pthread_barrier_init.c" />
+    <ClCompile Include="pthread_barrier_wait.c" />
+    <ClCompile Include="pthread_cancel.c" />
+    <ClCompile Include="pthread_condattr_destroy.c" />
+    <ClCompile Include="pthread_condattr_getpshared.c" />
+    <ClCompile Include="pthread_condattr_init.c" />
+    <ClCompile Include="pthread_condattr_setpshared.c" />
+    <ClCompile Include="pthread_cond_destroy.c" />
+    <ClCompile Include="pthread_cond_init.c" />
+    <ClCompile Include="pthread_cond_signal.c" />
+    <ClCompile Include="pthread_cond_wait.c" />
+    <ClCompile Include="pthread_delay_np.c" />
+    <ClCompile Include="pthread_detach.c" />
+    <ClCompile Include="pthread_equal.c" />
+    <ClCompile Include="pthread_exit.c" />
+    <ClCompile Include="pthread_getconcurrency.c" />
+    <ClCompile Include="pthread_getname_np.c" />
+    <ClCompile Include="pthread_getschedparam.c" />
+    <ClCompile Include="pthread_getspecific.c" />
+    <ClCompile Include="pthread_getunique_np.c" />
+    <ClCompile Include="pthread_getw32threadhandle_np.c" />
+    <ClCompile Include="pthread_join.c" />
+    <ClCompile Include="pthread_key_create.c" />
+    <ClCompile Include="pthread_key_delete.c" />
+    <ClCompile Include="pthread_kill.c" />
+    <ClCompile Include="pthread_mutexattr_destroy.c" />
+    <ClCompile Include="pthread_mutexattr_getkind_np.c" />
+    <ClCompile Include="pthread_mutexattr_getpshared.c" />
+    <ClCompile Include="pthread_mutexattr_getrobust.c" />
+    <ClCompile Include="pthread_mutexattr_gettype.c" />
+    <ClCompile Include="pthread_mutexattr_init.c" />
+    <ClCompile Include="pthread_mutexattr_setkind_np.c" />
+    <ClCompile Include="pthread_mutexattr_setpshared.c" />
+    <ClCompile Include="pthread_mutexattr_setrobust.c" />
+    <ClCompile Include="pthread_mutexattr_settype.c" />
+    <ClCompile Include="pthread_mutex_consistent.c" />
+    <ClCompile Include="pthread_mutex_destroy.c" />
+    <ClCompile Include="pthread_mutex_init.c" />
+    <ClCompile Include="pthread_mutex_lock.c" />
+    <ClCompile Include="pthread_mutex_timedlock.c" />
+    <ClCompile Include="pthread_mutex_trylock.c" />
+    <ClCompile Include="pthread_mutex_unlock.c" />
+    <ClCompile Include="pthread_num_processors_np.c" />
+    <ClCompile Include="pthread_once.c" />
+    <ClCompile Include="pthread_rwlockattr_destroy.c" />
+    <ClCompile Include="pthread_rwlockattr_getpshared.c" />
+    <ClCompile Include="pthread_rwlockattr_init.c" />
+    <ClCompile Include="pthread_rwlockattr_setpshared.c" />
+    <ClCompile Include="pthread_rwlock_destroy.c" />
+    <ClCompile Include="pthread_rwlock_init.c" />
+    <ClCompile Include="pthread_rwlock_rdlock.c" />
+    <ClCompile Include="pthread_rwlock_timedrdlock.c" />
+    <ClCompile Include="pthread_rwlock_timedwrlock.c" />
+    <ClCompile Include="pthread_rwlock_tryrdlock.c" />
+    <ClCompile Include="pthread_rwlock_trywrlock.c" />
+    <ClCompile Include="pthread_rwlock_unlock.c" />
+    <ClCompile Include="pthread_rwlock_wrlock.c" />
+    <ClCompile Include="pthread_self.c" />
+    <ClCompile Include="pthread_setaffinity.c" />
+    <ClCompile Include="pthread_setcancelstate.c" />
+    <ClCompile Include="pthread_setcanceltype.c" />
+    <ClCompile Include="pthread_setconcurrency.c" />
+    <ClCompile Include="pthread_setname_np.c" />
+    <ClCompile Include="pthread_setschedparam.c" />
+    <ClCompile Include="pthread_setspecific.c" />
+    <ClCompile Include="pthread_spin_destroy.c" />
+    <ClCompile Include="pthread_spin_init.c" />
+    <ClCompile Include="pthread_spin_lock.c" />
+    <ClCompile Include="pthread_spin_trylock.c" />
+    <ClCompile Include="pthread_spin_unlock.c" />
+    <ClCompile Include="pthread_testcancel.c" />
+    <ClCompile Include="pthread_timechange_handler_np.c" />
+    <ClCompile Include="pthread_timedjoin_np.c" />
+    <ClCompile Include="pthread_tryjoin_np.c" />
+    <ClCompile Include="pthread_win32_attach_detach_np.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h" />
+    <ClInclude Include="implement.h" />
+    <ClInclude Include="pthread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\svn\akibld\src\akisystems\akibld\akibld-headers.vcxproj">
+      <Project>{07fa51f2-cd6f-400f-8821-ebfe0040f2d6}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
